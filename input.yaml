@@ -1,0 +1,58 @@
+OUTPUT_FOLDER_PATH: "/Users/ilaigenishmac/CS/enrichment/Zohar-Projects/Iceberg-project/TIGIT-REP2-RESULTS-TESTS/"
+
+
+ANALYZER STEPS:
+    UMI: True
+    EXPERIMENT_LIBRARIES_DETECTION: True
+    EXPERIMENT_TRACES_REMOVAL: True
+    BWA: True
+    UNITE_READS_TO_ICEBERGS: True
+    MERGE_TREATMENT_AND_CONTROL_ICEBERGS_BY_LOCUS: True
+    UNITE_CLOSE_ICEBERGS_SITES: True
+    BREAKS_CLASSIFY: True
+    CALCULATE_ICEBERGS_SITES_PROFILE: True
+    GUIDERNA_ALIGNMENT: True
+    REPORTS: True
+
+
+
+EXPERIMENTS:
+    GENERAL:
+        REFERENCE_GENOME_PATH: "/Users/ilaigenishmac/CS/enrichment/Zohar-Projects/Iceberg-project/genome/hg38.fa"
+        EXPERIMENTS_TAG: "GTTTAATTGAGTTGTCATATGTTAATAACGGTAT"
+
+    TX:
+        NAME: "TIGIT-2"
+        EXPERIMENT_FOLDER_PATH: "/Users/ilaigenishmac/CS/enrichment/Zohar-Projects/Iceberg-project/omri_panels-19.10.21/EXPERIMENTS-FILES/TIGIT-2_18-4-21/"
+        R1: "TIGIT-2_S16_R1_001.fastq"
+        R2: "TIGIT-2_S16_R2_001.fastq"
+        I1: "TIGIT-2_S16_I1_001.fastq"
+        I2: "TIGIT-2_S16_I2_001.fastq"
+        GUIDERNA: "GCCCCTGGGCCCAGATCAGG"
+    
+    CONTROL:
+        NAME: "CONTROL"
+        EXPERIMENT_FOLDER_PATH: "/Users/ilaigenishmac/CS/enrichment/Zohar-Projects/Iceberg-project/omri_panels-19.10.21/EXPERIMENTS-FILES/TIGIT-2_18-4-21/"
+        R1: "Mock-1_S1_R1_001.fastq"
+        R2: "Mock-1_S1_R2_001.fastq"
+        I1: "Mock-1_S1_I1_001.fastq"
+        I2: "Mock-1_S1_I2_001.fastq"
+
+
+
+HYPERPARAMATERS:
+    UMI_BPS_AMOUNT_FROM_READS_START: 6
+    MIN_QUALITY: 10
+    MIN_FREQUENCY: 0.6
+    MAX_READS_DISTANCE: 400
+    MAX_ICEBERG_DISTANCE: 0
+    MAX_ALIGNMENTS_HAMMING_DISTANCE: 5
+    NOISE_BINS_AND_CONTROL_MAPQ_PERCENTILE: [[[0, 1], 0.5, 10],
+                                             [[1, 50], 0.5, 10],
+                                             [[50, 61], 0.5, 10]]
+    CRISPR_ACTIVITY_THRESHOLD: 0.9
+
+
+
+# bwa: /Users/ilaigenishmac/CS/enrichment/Zohar-Projects/Iceberg-project/bwa-0.7.17/bwa
+# bedtools: bedtools

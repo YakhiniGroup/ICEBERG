@@ -1,0 +1,13 @@
+version: "3.7"
+services:
+  iceberg:
+    build:
+      context: .
+#      args:
+#    environment:
+#      -
+
+    ports:
+      - "8000:8000"
+    container_name: iceberg
+    image: iceberg

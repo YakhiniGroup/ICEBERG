@@ -1,0 +1,54 @@
+OUTPUT_FOLDER_PATH: "test/EMX1_OUTPUT/"
+
+
+ANALYZER STEPS: 
+    UMI: True
+    EXPERIMENT_LIBRARIES_DETECTION: True
+    EXPERIMENT_TRACES_REMOVAL: True
+    BWA: True
+    UNITE_READS_TO_ICEBERGS: True
+    MERGE_TREATMENT_AND_CONTROL_ICEBERGS_BY_LOCUS: True
+    UNITE_CLOSE_ICEBERGS_SITES: True
+    BREAKS_CLASSIFY: True
+    CALCULATE_ICEBERGS_SITES_PROFILE: True
+    GUIDERNA_ALIGNMENT: True
+    REPORTS: True
+
+EXPERIMENTS:
+    EXPERIMENTS_FOLDER_PATH: "test/experiments-data/EMX1/"
+    REFERENCE_GENOME_PATH: "test/genome/test_genome.fa"
+    EXPERIMENTS_TAG: "GTTTAATTGAGTTGTCATATGTTAATAACGGTAT"
+
+    TX:
+        NAME: "EMX1"
+        R1: "EMX1.r1.fastq"
+        R2: "EMX1.r2.fastq"
+        I1: "EMX1.i1.fastq"
+        I2: "EMX1.i2.fastq"
+        GUIDERNA: "GAGTCCGAGCAGAAGAAGAA"
+
+    CONTROL:
+        NAME: "CONTROL"
+        R1: "control.r1.fastq"
+        R2: "control.r2.fastq"
+        I1: "control.i1.fastq"
+        I2: "control.i2.fastq"
+
+
+
+HYPERPARAMATERS:
+    UMI_BPS_AMOUNT_FROM_READS_START: 6
+    MIN_QUALITY: 10
+    MIN_FREQUENCY: 0.6
+    MAX_READS_DISTANCE: 400
+    MAX_ICEBERG_DISTANCE: 0
+    MAX_ALIGNMENTS_HAMMING_DISTANCE: 5
+    NOISE_BINS_AND_CONTROL_MAPQ_PERCENTILE: [[[0, 1],0.5,20],
+                                             [[1, 50],0.5,20],
+                                             [[50, 61],0.5,20]]
+    CRISPR_ACTIVITY_THRESHOLD: 0.9
+
+
+
+# bwa: /Users/ilaigenishmac/CS/enrichment/Zohar-Projects/Iceberg-project/bwa-0.7.17/bwa
+# bedtools: bedtools

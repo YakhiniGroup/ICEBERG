@@ -1,0 +1,17 @@
+cython
+Bio==1.3.3
+Flask==2.0.2
+bokeh==2.4.3
+Cerberus==1.3.4
+numpy==1.19.4
+pysam==0.16.0.1
+pandas==1.1.4
+panel==0.13.0
+plotly==4.14.3
+pyfaidx==0.5.9.2
+PyYAML==6.0
+setuptools==40.8.0
+tqdm==4.62.3
+igv-reports==1.0.1
+HTSeq==0.12.4
+scipy==1.5.4
