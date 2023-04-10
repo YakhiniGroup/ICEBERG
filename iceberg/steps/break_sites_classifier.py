@@ -354,7 +354,7 @@ class BreakSitesClassifier(object):
                                      total=icebergs_df.shape[0],
                                      out_of="icebergs-site")
 
-        icebergs_df = self.flag_treatment_sites_with_pair_end_reads_from_one_tag_side_only(icebergs_df)
+        # icebergs_df = self.flag_treatment_sites_with_pair_end_reads_from_one_tag_side_only(icebergs_df)
         noise_df, rest_df = self.filter_noise_sites(icebergs_df)
         pbar.update(noise_df.shape[0])
 
